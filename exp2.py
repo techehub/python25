@@ -9,7 +9,6 @@ class InSufficientFundError (Exception):
 
 acc_data = { "123": 22222, "222": 21323.66 }
 
-
 def withdraw(accno, amt):
    if amt > 10000:
        raise InvalidAmountError()
@@ -17,18 +16,16 @@ def withdraw(accno, amt):
        raise InvalidAccountError()
    if acc_data[accno] < amt :
        raise InSufficientFundError()
-
    acc_data[accno] = acc_data[accno] - amt
 
-
 def main ():
-
    while True:
        print ("#######################################")
        try :
            acc_no = input ("Enter acc number")
            amount = input ("Enter amount")
            withdraw(acc_no, int(amount))
+           print ("Balance ::", acc_data[acc_no])
        except InvalidAccountError as e:
            print (e)
            print ("Account is invalid")
@@ -43,7 +40,5 @@ def main ():
 
        except :
            print ("Somthing wrong !!!")
-
-
 
 main ()
