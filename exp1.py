@@ -19,7 +19,7 @@ def main ():
         elif (op=='/'):
             res = v1 / v2
 
-        print(res)
+
     except ValueError:
         print ("Invalid number please provide numeric values!!!")
     except ZeroDivisionError:
@@ -27,10 +27,12 @@ def main ():
     except Exception as e:
         print (e)
     else :
-        print ("worked with out error")
+        print(res)
     finally:
         print ("inside finally")
-main ()
+
+while (True):
+    main ()
 
 
 
