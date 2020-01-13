@@ -36,11 +36,8 @@ class Employee():
     def createEmplyeeWithIdAndNameAndDept(cls, id, name, dept):
         return cls(id, name, dept, 0, 0, 18)
 
-
-
 e1 = Employee.createEmplyeeWithName( "Kumar")
 #e2 = Employee.createEmplyeeWithIdAndNameAndDept("222", "Tom", "HR")
-
 print(e1.department)
 #print(e2.department)
 print(e1.totalSalary())
