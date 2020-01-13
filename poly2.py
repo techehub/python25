@@ -1,10 +1,16 @@
-class Car:
+from abc import  ABC, abstractmethod
+
+
+class Car (ABC):
+    @abstractmethod
     def start(self):
         pass
 
+    @abstractmethod
     def accelerate(self):
         pass
 
+    @abstractmethod
     def stop(self):
         pass
 
@@ -16,8 +22,9 @@ class Nano(Car):
     def accelerate(self):
         print("Accelerating Nano")
 
-    def stop(self):
-        print("Stopping nano")
+    def stop (self):
+        print ("stop Nano")
+
 
 
 class Alto(Car):
